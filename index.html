@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Mathematical Notations</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-image: url('./Assets/grid.png'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+            margin: 0;
+            text-align: center; /* Center text within the body */
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            background-color: #3779c9;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .alert {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            top: 20px; /* Place at the bottom */
+            left: 50%; /* Center the alert horizontally */
+            transform: translateX(-50%); /* Center align */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000; /* Make sure it is on top */
+            font-size: 16px;
+            transition: opacity 1s ease-out; /* Fade out effect */
+        }
+
+        .alert.show {
+            display: block; /* Show the alert */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #3779c9;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mathematical Notations and Numberical Constant</h1>
+    <h3> 📝 A God-send tool for STEM students 🔬 </h3>
+    <p>Step1: Find your section </br> 
+        Step2: Click button to copy & Paste your constants or your notations  </br> 
+        Step 3: If what you're looking for is not here, please contact me in the footer section </p>
+
+
+    <div id="alert-box" class="alert"></div>
+
+    <!-- Section 1: Basic Mathematical Notations -->
+    <h2>Section 1: Basic Mathematical Notations</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copyFormattedText('  10<sup>n</sup> &nbsp;' )">Exponents <sup>n</sup> </button>
+        <button class="copy-btn" onclick="copytxt('√')">Roots</button>
+        <button class="copy-btn" onclick="copytxt('π')">Pi notations</button>
+        <button class="copy-btn" onclick="copytxt('3.14159269')">Pi number</button>
+        <button class="copy-btn" onclick="copytxt('2.718')">Euler's Number (e)</button>
+        <button class="copy-btn" onclick="copytxt('√-1')">Imaginary Unit (i)</button>
+        <button class="copy-btn" onclick="copytxt('Σ')">Summation (Σ)</button>
+        <button class="copy-btn" onclick="copytxt('Π')">Product (Π)</button>
+        <button class="copy-btn" onclick="copytxt('°')">Degree (°)</button>
+    </div>
+
+    <!-- Section 2: Physical Constants -->
+    <h2>Section 2: Physical Numerical Constants</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copyFormattedText('3.00 × 10<sup>8</sup> m/s')">Speed of Light (c)</button>
+        <button class="copy-btn" onclick="copyFormattedText('6.674 × 10<sup>-11</sup> m<sup>-3</sup> kg<sup>-1</sup> s<sup>-2</sup> &nbsp;')">Gravitational Constant (G)</button>
+        <button class="copy-btn" onclick="copyFormattedText('6.626 × 10<sup>-34</sup> J⋅s')">Planck's Constant (h)</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.38 × 10<sup>-23</sup> J/K')">Boltzmann Constant (k<sub>B</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('6.022 × 10<sup>23</sup> mol<sup>-1</sup> &nbsp;')">Avogadro's Number (N<sub>A</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.602 × 10<sup>-19</sup> C')">Elementary Charge # (e)</button>
+    </div>
+
+    <!-- Section 3: Common Units in Scientific Notation -->
+    <h2>Section 3: Common Units Constant</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>12</sup> &nbsp; ')">Tera (T) 10<sup>12</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>9</sup> &nbsp;')">Giga (G) 10<sup>9</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>6</sup> &nbsp;')">Mega (M) 10<sup>6</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>3</sup> &nbsp;')">Kilo (k) 10<sup>3</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>-3</sup> &nbsp;')">Milli (m) 10<sup>-3</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>-9</sup> &nbsp;')">Nano (n) 10<sup>-9</sup></button>
+    </div>
+
+    <!-- Section 4: Electromagnetic Notations -->
+    <h2>Section 4: Electromagnetic Constants</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('96485 C/mol')">Faraday's Constant (F)</button>
+        <button class="copy-btn" onclick="copyFormattedText('4π × 10<sup>-7</sup> N/A<sup>2</sup> &nbsp;')">Permeability of Free Space (μ<sup>0</sup>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('8.85 × 10<sup>-12</sup> F/m ')">Permittivity of Free Space (ε<sup>0</sup>)</button>
+    </div>
+
+    <!-- Section 5: Statistical Notations -->
+    <h2>Section 5: Statistical Notations</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('μ')">Mean (μ)</button>
+        <button class="copy-btn" onclick="copyFormattedText('σ<sup>2</sup>  &nbsp;')">Variance (σ<sup>2</sup>)</button>
+        <button class="copy-btn" onclick="copytxt('σ')">Standard Deviation (σ)</button>
+        <button class="copy-btn" onclick="copytxt('P(A)')">Probability (P(A))</button>
+    </div>
+
+    <!-- Section 6: Molecular and Chemical Notations -->
+    <h2>Section 6: Molecular and Chemical Notations</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('Ms (g/mol)')">Molar Mass (g/mol)</button>
+        <button class="copy-btn" onclick="copytxt('pH')">pH</button>
+        <button class="copy-btn" onclick="copytxt('[A]')">Concentration [A]</button>
+    </div> 
+
+     <!-- Section 7: Probability and Statistics -->
+     <h2>Section 7: Probability and Statistics Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('P(A ∩ B)')">Intersection (P(A ∩ B))</button>
+         <button class="copy-btn" onclick="copytxt('P(A ∪ B)')">Union (P(A ∪ B))</button>
+         <button class="copy-btn" onclick="copytxt('P(A|B)')">Conditional Probability (P(A|B))</button>
+         <!-- Add more probability and statistics notations here if needed -->
+     </div>
+ 
+     <!-- Section 8: Quantum Mechanics -->
+     <h2>Section 8: Quantum Mechanics Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('ħ')">Reduced Planck Constant (ħ)</button>
+         <button class="copy-btn" onclick="copytxt('ψ')">Wave Function (ψ)</button>
+         <button class="copy-btn" onclick="copytxt('ΔE')">Energy Difference (ΔE)</button>
+         <!-- Add more quantum mechanics notations here if needed -->
+     </div>
+ 
+     <!-- Section 9: Thermodynamics -->
+     <h2>Section 9: Thermodynamics Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('ΔS')">Entropy Change (ΔS)</button>
+         <button class="copy-btn" onclick="copytxt('ΔH')">Enthalpy Change (ΔH)</button>
+         <button class="copy-btn" onclick="copytxt('ΔG')">Gibbs Free Energy (ΔG)</button>
+         <!-- Add more thermodynamics notations here if needed -->
+     </div>
+ 
+     <!-- Section 10: Special Relativity -->
+     <h2>Section 10: Special Relativity Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('E=mc²')">Energy-Mass Equivalence (E=mc²)</button>
+         <button class="copy-btn" onclick="copytxt('γ')">Lorentz Factor (γ)</button>
+         <!-- Add more special relativity notations here if needed -->
+     </div>
+ 
+     <!-- Section 11: General Relativity -->
+     <h2>Section 11: General Relativity Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('Gμν')">Einstein Tensor (Gμν)</button>
+         <button class="copy-btn" onclick="copytxt('Rμν')">Ricci Curvature Tensor (Rμν)</button>
+         <!-- Add more general relativity notations here if needed -->
+     </div>
+ 
+     <!-- Section 12: Astrophysics -->
+     <h2>Section 12: Astrophysics Notations</h2>
+     <div class="button-container">
+         <button class="copy-btn" onclick="copytxt('H₀')">Hubble Constant (H₀)</button>
+         <button class="copy-btn" onclick="copytxt('Ω')">Density Parameter (Ω)</button>
+         <!-- Add more astrophysics notations here if needed -->
+     </div>
+  
+    <!-- You can continue the same pattern for all 12 sections -->
+    <!-- &nbsp; is used to add space after superscript so the user can continue writing without being stuck in superscript --> 
+    <script>
+        function showAlert(message) {
+            var alertBox = document.getElementById('alert-box');
+            alertBox.innerText = message;
+            alertBox.classList.add('show');
+
+            // Set a timeout to start fading out after 2 seconds
+            setTimeout(function() {
+                alertBox.style.opacity = 0; // Start fading out
+                
+                // Remove the 'show' class and reset opacity after fade-out
+                setTimeout(function() {
+                    alertBox.classList.remove('show');
+                    alertBox.style.opacity = 1; // Reset opacity for the next alert
+                }, 1000); // Duration should match the CSS transition time
+            }, 2000); // Delay before starting to fade out
+        }
+ 
+        function copytxt(text) {
+            const tempElement = document.createElement('textarea');
+            tempElement.value = text;
+            document.body.appendChild(tempElement);
+            tempElement.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempElement);
+            showAlert('Copied: ' + text);
+        } 
+
+
+        function copyFormattedText(htmlText) {
+            // Create a temporary element to hold the HTML content
+            var tempElement = document.createElement("div");
+            tempElement.innerHTML = htmlText;
+
+            // Create a Blob with HTML content
+            var blob = new Blob([tempElement.innerHTML], { type: 'text/html' });
+            var clipboardItem = new ClipboardItem({ 'text/html': blob });
+
+            // Write the HTML content to the clipboard
+            navigator.clipboard.write([clipboardItem]).then(function() {
+                showAlert("Formatted text copied!");
+            }).catch(function(error) {
+                showAlert("Error copying text: " + error);
+            });
+        }
+      
+        </script>
+        
+    </script>
+
+</body>
+<footer>
+    <p>Author: Oanh TN Tran</p>
+    <p><a href="mailto:otxtra1234@gmail.com">Contact Me</a></p>
+  </footer>
+</html>

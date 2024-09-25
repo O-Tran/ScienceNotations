@@ -3,7 +3,7 @@
 ##  📝 A God-send tool for STEM students 🔬
 
 Check out my tools
-[Science Notation] ( https://o-tran.github.io/ScienceNotations/)
+[Science Notation](https://o-tran.github.io/ScienceNotations/)
 
 ## What is this tool? ## 
 This is a webpage that helps students with their lab reports by allowing students to copy and paste formatted scientific notations. 

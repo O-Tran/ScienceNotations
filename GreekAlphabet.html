@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Mathematical Notations</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('./Assets/grid.png'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+            margin: 0;
+            text-align: center; /* Center text within the body */
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            background-color: #3779c9;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .green-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .green-btn:hover {
+            background-color: #3779c9;
+        }
+
+        .alert {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            top: 20px; /* Place at the bottom */
+            left: 50%; /* Center the alert horizontally */
+            transform: translateX(-50%); /* Center align */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000; /* Make sure it is on top */
+            font-size: 16px;
+            transition: opacity 1s ease-out; /* Fade out effect */
+        }
+
+        .alert.show {
+            display: block; /* Show the alert */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #3779c9;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Greek alphabet</h1>
+    <h3> For those Pesky Greek Terminology ... </h3>
+    <p>Step1: Find your letter </br> 
+        Step2: Click button to copy & Paste your notations  </br> 
+        Step 3: If what you're looking for is not here, please contact me in the footer section </p>
+
+    <div id="alert-box" class="alert"></div>
+    <div> 
+        <button class=" green-btn nav-btn" onclick="navigateToPage()">Mathematical Notations and Constant</button>
+    </div>
+    <!-- Section 1: Basic Mathematical Notations -->
+    <h2>Greek Alphabet Uppercase</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('Α' )">Alpha (Α) </button>
+        <button class="copy-btn" onclick="copytxt('B' )">Beta (B) </button>
+        <button class="copy-btn" onclick="copytxt('Γ' )">Gamma (Γ) </button>
+        <button class="copy-btn" onclick="copytxt('Δ' )">Delta (Δ) </button>
+        <button class="copy-btn" onclick="copytxt('E' )">Epsilon (E) </button>
+        <button class="copy-btn" onclick="copytxt('Z' )">Zeta (Z) </button>
+        <button class="copy-btn" onclick="copytxt('H' )">Eta (H) </button>
+        <button class="copy-btn" onclick="copytxt('Θ' )">Theta (Θ) </button>
+        <button class="copy-btn" onclick="copytxt('I' )">Iota (I) </button>
+        <button class="copy-btn" onclick="copytxt('K' )">Kappa (K) </button>
+        <button class="copy-btn" onclick="copytxt('Λ' )">Lambda (Λ) </button>
+        <button class="copy-btn" onclick="copytxt('M' )">Mu (M) </button>
+        <button class="copy-btn" onclick="copytxt('N' )">Nu (N) </button>
+        <button class="copy-btn" onclick="copytxt('Ξ' )">Xi (Ξ) </button>
+        <button class="copy-btn" onclick="copytxt('O' )">Omicron (O) </button>
+        <button class="copy-btn" onclick="copytxt('Π' )">Pi (Π) </button>
+        <button class="copy-btn" onclick="copytxt('Ρ' )">Rho (Ρ) </button>
+        <button class="copy-btn" onclick="copytxt('Σ' )">Sigma (Σ) </button>
+        <button class="copy-btn" onclick="copytxt('T' )">Tau (T) </button>
+        <button class="copy-btn" onclick="copytxt('Y' )">Upsilon (Y) </button>
+        <button class="copy-btn" onclick="copytxt('Φ' )">Phi (Φ) </button>
+        <button class="copy-btn" onclick="copytxt('Χ' )">Chi (Χ) </button>
+        <button class="copy-btn" onclick="copytxt('Ψ' )">Psi (Ψ) </button>
+        <button class="copy-btn" onclick="copytxt('Ω' )">Omega (Ω) </button>
+
+    </div>
+    <h2>Greek Alphabet lowercase</h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('α' )">Alpha (α) </button>
+        <button class="copy-btn" onclick="copytxt('β' )">Beta (β) </button>
+        <button class="copy-btn" onclick="copytxt('γ' )">Gamma (γ) </button>
+        <button class="copy-btn" onclick="copytxt('δ' )">Delta (δ) </button>
+        <button class="copy-btn" onclick="copytxt('ε' )">Epsilon (ε) </button>
+        <button class="copy-btn" onclick="copytxt('ζ' )">Zeta (ζ) </button>
+        <button class="copy-btn" onclick="copytxt('η' )">Eta (η) </button>
+        <button class="copy-btn" onclick="copytxt('θ' )">Theta (θ) </button>
+        <button class="copy-btn" onclick="copytxt('ι' )">Iota (ι) </button>
+        <button class="copy-btn" onclick="copytxt('κ' )">Kappa (κ) </button>
+        <button class="copy-btn" onclick="copytxt('λ' )">Lambda (λ) </button>
+        <button class="copy-btn" onclick="copytxt('μ' )">Mu (μ) </button>
+        <button class="copy-btn" onclick="copytxt('ν' )">Nu (ν) </button>
+        <button class="copy-btn" onclick="copytxt('ξ' )">Xi (ξ) </button>
+        <button class="copy-btn" onclick="copytxt('ο' )">Omicron (ο) </button>
+        <button class="copy-btn" onclick="copytxt('π' )">Pi (π) </button>
+        <button class="copy-btn" onclick="copytxt('ρ' )">Rho (ρ) </button>
+        <button class="copy-btn" onclick="copytxt('σ' )">Sigma V1 (σ) </button>
+        <button class="copy-btn" onclick="copytxt('ς' )">Sigma V2 (ς) </button>
+        <button class="copy-btn" onclick="copytxt('τ' )">Tau (τ) </button>
+        <button class="copy-btn" onclick="copytxt('υ' )">Upsilon (υ) </button>
+        <button class="copy-btn" onclick="copytxt('φ' )">Phi (φ) </button>
+        <button class="copy-btn" onclick="copytxt('χ' )">Chi (χ) </button>
+        <button class="copy-btn" onclick="copytxt('ψ' )">Psi (ψ) </button>
+        <button class="copy-btn" onclick="copytxt('ω' )">Omega (ω) </button>
+
+    </div>
+
+
+
+    <!-- You can continue the same pattern for all 12 sections -->
+    <!-- &nbsp; is used to add space after superscript so the user can continue writing without being stuck in superscript --> 
+    <script>
+        function showAlert(message) {
+            var alertBox = document.getElementById('alert-box');
+            alertBox.innerText = message;
+            alertBox.classList.add('show');
+
+            // Set a timeout to start fading out after 2 seconds
+            setTimeout(function() {
+                alertBox.style.opacity = 0; // Start fading out
+                
+                // Remove the 'show' class and reset opacity after fade-out
+                setTimeout(function() {
+                    alertBox.classList.remove('show');
+                    alertBox.style.opacity = 1; // Reset opacity for the next alert
+                }, 1000); // Duration should match the CSS transition time
+            }, 2000); // Delay before starting to fade out
+        }
+ 
+        function copytxt(text) {
+            const tempElement = document.createElement('textarea');
+            tempElement.value = text;
+            document.body.appendChild(tempElement);
+            tempElement.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempElement);
+            showAlert('Copied: ' + text);
+        } 
+
+        function navigateToPage() {
+            window.location.href = 'index.html'; // Change this to your target page
+        }
+    </script>
+
+</body>
+<footer>
+    <p>© 2024 Oanh Sonny Tran. All rights reserved.</p>
+    <p><a href="mailto:otxtra1234@gmail.com">Contact Me</a></p>
+  </footer>
+</html>

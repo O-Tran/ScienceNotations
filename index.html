@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: white;
-            background-image: url('./Assets/Grid.png'); 
+            background-image: url('./Assets/grid.png'); /* Add your background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -35,6 +35,18 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .green-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .green-btn:hover {
+            background-color: #3779c9;
         }
 
         .copy-btn:hover {
@@ -92,23 +104,46 @@
 
 
     <div id="alert-box" class="alert"></div>
+    <div> 
+        <button class="green-btn nav-btn" onclick="navigateToPage()">Greek Alphabet</button>
+    </div>
 
     <!-- Section 1: Basic Mathematical Notations -->
     <h2>Section 1: Basic Mathematical Notations</h2>
     <div class="button-container">
-        <button class="copy-btn" onclick="copyFormattedText('  10<sup>n</sup> &nbsp;' )">Exponents <sup>n</sup> </button>
-        <button class="copy-btn" onclick="copytxt('√')">Roots</button>
-        <button class="copy-btn" onclick="copytxt('π')">Pi notations</button>
-        <button class="copy-btn" onclick="copytxt('3.14159269')">Pi number</button>
-        <button class="copy-btn" onclick="copytxt('2.718')">Euler's Number (e)</button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>n</sup> &nbsp;' )">Exponents <sup>n</sup> </button>
+        <button class="copy-btn" onclick="copyFormattedText('x<sup>2</sup> &nbsp;' )">Squared (x<sup>2</sup>) </button>
+        <button class="copy-btn" onclick="copyFormattedText('x<sup>3</sup> &nbsp;' )">Cubed (x<sup>3</sup>) </button>
+        <button class="copy-btn" onclick="copytxt('√')">Roots (√)</button>
+        <button class="copy-btn" onclick="copyFormattedText('<sup>3</sup>√')"> Cube Roots (<sup>3</sup>√) </button>
+        <button class="copy-btn" onclick="copytxt('π')">Pi (π)</button>
         <button class="copy-btn" onclick="copytxt('√-1')">Imaginary Unit (i)</button>
         <button class="copy-btn" onclick="copytxt('Σ')">Summation (Σ)</button>
         <button class="copy-btn" onclick="copytxt('Π')">Product (Π)</button>
-        <button class="copy-btn" onclick="copytxt('°')">Degree (°)</button>
+        <button class="copy-btn" onclick="copyFormattedText('<sup>n</sup><sub>i</sub> &nbsp;')">Subscript + Superscript (<sup>n</sup><sub>i</sub> )</button>
+        <button class="copy-btn" onclick="copyFormattedText('Log<sub>10</sub> &nbsp;')">Logarithm base 10 (Log<sub>10</sub)</button> 
+        <button class="copy-btn" onclick="copyFormattedText('N(t) = N<sub>0</sub>e<sup>kt</sup> &nbsp;')"> N(t)= N<sub>0</sub>e<sup>kt</sup></button> 
+
+    </div>
+    <h4>Mathematical Constants </h4>
+
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('3.14159269')">Pi number</button>
+        <button class="copy-btn" onclick="copytxt('2.718')">Euler's Number (e)</button>
     </div>
 
     <!-- Section 2: Physical Constants -->
-    <h2>Section 2: Physical Numerical Constants</h2>
+    <h2>Section 2: Physics </h2>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('°F')">Farenheit(°F)</button>
+        <button class="copy-btn" onclick="copytxt('°C')">Celsius (°C)</button>
+        <button class="copy-btn" onclick="copytxt('°K')">Kelvin (°K)</button>
+        <button class="copy-btn" onclick="copyFormattedText('k<sub>B</sub>  &nbsp;')">Boltzmann Notation (k<sub>B</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('N<sub>A</sub>> &nbsp;')">Avogadro's Notation (N<sub>A</sub>)</button>
+        <button class="copy-btn nav-btn" onclick="navigateToPage()">Greek Alphabet</button>
+    </div>
+
+    <h4>Physics and Constants</h4>
     <div class="button-container">
         <button class="copy-btn" onclick="copyFormattedText('3.00 × 10<sup>8</sup> m/s')">Speed of Light (c)</button>
         <button class="copy-btn" onclick="copyFormattedText('6.674 × 10<sup>-11</sup> m<sup>-3</sup> kg<sup>-1</sup> s<sup>-2</sup> &nbsp;')">Gravitational Constant (G)</button>
@@ -118,15 +153,24 @@
         <button class="copy-btn" onclick="copyFormattedText('1.602 × 10<sup>-19</sup> C')">Elementary Charge # (e)</button>
     </div>
 
+    <h4>Energy Notations</h4>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copyFormattedText('KE=1/2(mv<sup>2</sup> &nbsp;')">Kinetic Energy KE=1/2(mv<sup>2</sup>)</button> 
+        <button class="copy-btn" onclick="copytxt('PE=mgh')">Potential Energy KE=mgh</button> 
+        <button class="copy-btn" onclick="copytxt('W=Fd')">Work (W=Fd)</button>
+     
+
     <!-- Section 3: Common Units in Scientific Notation -->
     <h2>Section 3: Common Units Constant</h2>
     <div class="button-container">
         <button class="copy-btn" onclick="copyFormattedText('10<sup>12</sup> &nbsp; ')">Tera (T) 10<sup>12</sup></button>
         <button class="copy-btn" onclick="copyFormattedText('10<sup>9</sup> &nbsp;')">Giga (G) 10<sup>9</sup></button>
         <button class="copy-btn" onclick="copyFormattedText('10<sup>6</sup> &nbsp;')">Mega (M) 10<sup>6</sup></button>
-        <button class="copy-btn" onclick="copyFormattedText('10<sup>3</sup> &nbsp;')">Kilo (k) 10<sup>3</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>3</sup> &nbsp;')">Kilo (K) 10<sup>3</sup></button>
         <button class="copy-btn" onclick="copyFormattedText('10<sup>-3</sup> &nbsp;')">Milli (m) 10<sup>-3</sup></button>
         <button class="copy-btn" onclick="copyFormattedText('10<sup>-9</sup> &nbsp;')">Nano (n) 10<sup>-9</sup></button>
+        <button class="copy-btn" onclick="copyFormattedText('10<sup>-12</sup> &nbsp;')">Pico (p) 10<sup>-9</sup></button>
+
     </div>
 
     <!-- Section 4: Electromagnetic Notations -->
@@ -135,6 +179,9 @@
         <button class="copy-btn" onclick="copytxt('96485 C/mol')">Faraday's Constant (F)</button>
         <button class="copy-btn" onclick="copyFormattedText('4π × 10<sup>-7</sup> N/A<sup>2</sup> &nbsp;')">Permeability of Free Space (μ<sup>0</sup>)</button>
         <button class="copy-btn" onclick="copyFormattedText('8.85 × 10<sup>-12</sup> F/m ')">Permittivity of Free Space (ε<sup>0</sup>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('μ<sup>0</sup> &nbsp;')">μ<sup>0</sup> Notation</button>
+        <button class="copy-btn" onclick="copyFormattedText('ε<sup>0</sup> &nbsp;')">ε<sup>0</sup> Notation</button>
+
     </div>
 
     <!-- Section 5: Statistical Notations -->
@@ -144,14 +191,31 @@
         <button class="copy-btn" onclick="copyFormattedText('σ<sup>2</sup>  &nbsp;')">Variance (σ<sup>2</sup>)</button>
         <button class="copy-btn" onclick="copytxt('σ')">Standard Deviation (σ)</button>
         <button class="copy-btn" onclick="copytxt('P(A)')">Probability (P(A))</button>
+        <button class="copy-btn" onclick="copyFormattedText('Σx<sup>2</sup> &nbsp;')">Sum of Squares (Σx<sup>2</sup>)</button>
+        <button class="copy-btn" onclick="copytxt('Z')">Z-Score (Z)</button>
     </div>
 
     <!-- Section 6: Molecular and Chemical Notations -->
     <h2>Section 6: Molecular and Chemical Notations</h2>
     <div class="button-container">
-        <button class="copy-btn" onclick="copytxt('Ms (g/mol)')">Molar Mass (g/mol)</button>
+        <button class="copy-btn" onclick="copytxt('g/mol')">Molar Mass (g/mol)</button>
         <button class="copy-btn" onclick="copytxt('pH')">pH</button>
         <button class="copy-btn" onclick="copytxt('[A]')">Concentration [A]</button>
+        <button class="copy-btn" onclick="copytxt('PV=nRT')">Ideal Gas Law</button>
+        <button class="copy-btn" onclick="copyFormattedText('N<sub>A</sub> &nbsp;')">Avogadro Notation (N<sub>A</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('k<sub>B</sub> &nbsp;')">Boltzmann Notation (k<sub>B</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('m<sub>e</sub> &nbsp;')">Mass Notation of e- (m<sub>e</sub>) </button>
+        <button class="copy-btn" onclick="copyFormattedText('m<sub>p</sub> &nbsp;')">Mass Notation of [H+] (m<sub>p</sub>)</button>
+    </div> 
+
+    <h4>Molecular and Chemical Constants </h4>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copyFormattedText('6.022 × 10<sup>23</sup> mol<sup>-1</sup> &nbsp;')">Avogadro's Number (N<sub>A</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.602 × 10<sup>-19</sup> C')">Elementary Charge # (e)</button>
+        <button class="copy-btn" onclick="copyFormattedText('8.314 J mol<sup>-1</sup> K<sup>-1</sup> &nbsp;')">Universal Gas Const R (J/(mol K))</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.38 × 10<sup>-23</sup> J/K')">Boltzmann Constant (k<sub>B</sub>)</button>
+        <button class="copy-btn" onclick="copyFormattedText('9.106 10<sup>-31</sup> C')">Mass of electron (m<sub>e</sub>) </button>
+        <button class="copy-btn" onclick="copyFormattedText('1.673 10<sup>-27</sup> C')">Mass of proton (m<sub>p</sub>)</button>
     </div> 
 
      <!-- Section 7: Probability and Statistics -->
@@ -166,6 +230,7 @@
      <!-- Section 8: Quantum Mechanics -->
      <h2>Section 8: Quantum Mechanics Notations</h2>
      <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('λ)')">Wavelength (λ)</button>
          <button class="copy-btn" onclick="copytxt('ħ')">Reduced Planck Constant (ħ)</button>
          <button class="copy-btn" onclick="copytxt('ψ')">Wave Function (ψ)</button>
          <button class="copy-btn" onclick="copytxt('ΔE')">Energy Difference (ΔE)</button>
@@ -178,6 +243,11 @@
          <button class="copy-btn" onclick="copytxt('ΔS')">Entropy Change (ΔS)</button>
          <button class="copy-btn" onclick="copytxt('ΔH')">Enthalpy Change (ΔH)</button>
          <button class="copy-btn" onclick="copytxt('ΔG')">Gibbs Free Energy (ΔG)</button>
+         <button class="copy-btn" onclick="copytxt('ΔU=Q-W)')">First Law(ΔU = Q - W)</button>
+         <button class="copy-btn" onclick="copytxt('°F')">Farenheit(°F)</button>
+         <button class="copy-btn" onclick="copytxt('°C')">Celsius (°C)</button>
+         <button class="copy-btn" onclick="copytxt('°K')">Kelvin (°K)</button>
+
          <!-- Add more thermodynamics notations here if needed -->
      </div>
  
@@ -200,10 +270,22 @@
      <!-- Section 12: Astrophysics -->
      <h2>Section 12: Astrophysics Notations</h2>
      <div class="button-container">
-         <button class="copy-btn" onclick="copytxt('H₀')">Hubble Constant (H₀)</button>
+         <button class="copy-btn" onclick="copytxt('H₀')">Hubble (H₀)</button>
          <button class="copy-btn" onclick="copytxt('Ω')">Density Parameter (Ω)</button>
+         <button class="copy-btn" onclick="copyFormattedText('M<sub>⊙</sub> &nbsp;')">Solar Mass Notation (M<sub>⊙</sub>)</button>
          <!-- Add more astrophysics notations here if needed -->
      </div>
+
+          <!-- Section 12: Astrophysics -->
+    <h4>Astrophysics Constants </h4>
+    <div class="button-container">
+        <button class="copy-btn" onclick="copytxt('69.8 km/s/Mpc')">Hubble Constant (H₀)</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.496 × 10<sup>8</sup> Km')">Astronomical Units (1AU)</button>
+        <button class="copy-btn" onclick="copyFormattedText('3.086 x 10<sup>16</sup> m')">Parsec(pc)</button>
+        <button class="copy-btn" onclick="copyFormattedText('9.461 × 10<sup>15</sup> Km')">Light year (ly)</button>
+        <button class="copy-btn" onclick="copyFormattedText('1.989 x 10<sup>30</sup> m')">Solar Mass (M<sub>⊙</sub>)</button>
+        <!-- Add more astrophysics notations here if needed -->
+    </div>
   
     <!-- You can continue the same pattern for all 12 sections -->
     <!-- &nbsp; is used to add space after superscript so the user can continue writing without being stuck in superscript --> 
@@ -253,7 +335,9 @@
             });
         }
       
-        </script>
+        function navigateToPage() {
+            window.location.href = 'GreekAlphabet.html'; // Change this to your target page
+        }
         
     </script>
 
